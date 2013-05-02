@@ -12,7 +12,7 @@ class Doctrine {
 
   public function __construct()
   {
-  
+
     // load database configuration from CodeIgniter
     require_once APPPATH.'config/database.php';
 
@@ -43,7 +43,7 @@ class Doctrine {
     // Set up logger
     // $logger = new EchoSQLLogger;
     // $config->setSQLLogger($logger);
-    
+
     $config->setAutoGenerateProxyClasses( TRUE );
 
     // Database connection information
@@ -57,6 +57,6 @@ class Doctrine {
 
     // Create EntityManager
     $this->em = EntityManager::create($connectionOptions, $config);
-    
+
   }
 }
