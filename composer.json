@@ -1,9 +1,12 @@
 {
-    "name": "camna/doctrine",
+    "name": "camna/codeigniter-doctrine",
     "description": "CodeIgniter Wrapper for the Doctrine ORM",
     "type": "codeigniter-library",
     "require": {
         "doctrine/orm": "2.3.*",
         "composer/installers": "~1.0"
+    },
+    "extra": {
+        "installer-name": "Doctrine"
     }
 }

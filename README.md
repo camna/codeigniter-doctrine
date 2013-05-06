@@ -10,6 +10,6 @@ If you use [Composer](http://getcomposer.org), add the following code to your co
 
     {
       "require": {
-        "camna/doctrine": "*"
+        "camna/codeigniter-doctrine": "*"
       }
     }
