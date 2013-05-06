@@ -7,10 +7,9 @@ Installation
 ------------
 
 If you use [Composer](http://getcomposer.org), add the following code to your composer.json file and run `composer install`.
-`
-{
-    "require": {
-        "camna/doctrine": "*"
-    }
-}
-`
+	{
+    	"require": {
+				"camna/doctrine": "*"
+    	}
+	}
+
