@@ -13,14 +13,12 @@ class Doctrine_entity extends CI_Model {
     public $repository;
         
     function __construct() {
-      
-      $this->load->library('doctrine');
-      
+            
       if (get_called_class() != __CLASS__)
       {
         $this->repository = $this->doctrine->em->getRepository(get_called_class());
       }
-    
+      
       parent::__construct();
       
     }
