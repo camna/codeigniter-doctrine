@@ -4,7 +4,7 @@
     "type": "codeigniter-library",
     "require": {
         "doctrine/orm": "2.3.*",
-        "composer/installers": "dev-master"
+        "composer/installers": "dev-master#04ae2b42384ed2f8d40263229530cabbaff3f930"
     },
     "extra": {
         "installer-name": "Doctrine"
