@@ -138,38 +138,38 @@ From your controller or model you can save data like so:
     // Load the required libraries.
     $this->load->library('doctrine');
     $this->load->library('doctrine/doctrine_entity');
-	  $this->load->model('entities/rsvp');
-	  
-	  // Create a generic RSVP object.
-	  $rsvp = new RSVP();
-	  $rsvp->setName('David Barratt');
-	  $rsvp->setAttending(FALSE);
-	  
-	  // Persist the object,
-	  $this->doctrine->em->persist($rsvp);
-	  
-	  // Flush Doctrine, this is where the SQL Insert is performed.
-	  $this->doctrine->em->flush();
+    $this->load->model('entities/rsvp');
+    
+    // Create a generic RSVP object.
+    $rsvp = new RSVP();
+    $rsvp->setName('David Barratt');
+    $rsvp->setAttending(FALSE);
+    
+    // Persist the object,
+    $this->doctrine->em->persist($rsvp);
+    
+    // Flush Doctrine, this is where the SQL Insert is performed.
+    $this->doctrine->em->flush();
 
 You can query data like so:
 
     // Load the required libraries.
     $this->load->library('doctrine');
     $this->load->library('doctrine/doctrine_entity');
-	  $this->load->model('entities/rsvp');
-	  
-	  // Load the RSVP Object with an ID of 3
-	  $rsvp = $this->rsvp->repository->find(3);
-	  
-	  // Get the Name
-	  $name = $rsvp->getName();
+    $this->load->model('entities/rsvp');
+    
+    // Load the RSVP Object with an ID of 3
+    $rsvp = $this->rsvp->repository->find(3);
+    
+    // Get the Name
+    $name = $rsvp->getName();
 
 If you'd like to update the object (above), you can do this:
     
     // Set the Name
     $name->setName('Jon Stewart');
-	  
-	  // Flush Doctrine, this is where the SQL Insert is performed.
-	  $this->doctrine->em->flush();
+    
+    // Flush Doctrine, this is where the SQL Insert is performed.
+    $this->doctrine->em->flush();
 	  
 For more information, please refer to the [Doctrine ORM Documentation](http://docs.doctrine-project.org/en/latest/)
