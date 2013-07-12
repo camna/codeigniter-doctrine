@@ -169,7 +169,7 @@ If you'd like to update the object (above), you can do this:
     // Set the Name
     $name->setName('Jon Stewart');
     
-    // Flush Doctrine, this is where the SQL Insert is performed.
+    // Flush Doctrine, this is where the SQL Update is performed.
     $this->doctrine->em->flush();
 	  
 For more information, please refer to the [Doctrine ORM Documentation](http://docs.doctrine-project.org/en/latest/)
