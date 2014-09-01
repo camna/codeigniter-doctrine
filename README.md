@@ -7,13 +7,13 @@ Installation
 ------------
 
 If you use [Composer](http://getcomposer.org), add the following code to your composer.json file and run `composer install`.
-
+```json
     {
       "require": {
         "camna/codeigniter-doctrine": "1.*@dev"
       }
     }
-
+```
 Usage
 ------------
 
@@ -22,7 +22,7 @@ Create a new folder called `entities` in `application/models`. This is where you
 Here is an example Entity:
 
 `application/models/entities/rsvp.php`
-
+```php
     <?php
     
     use Doctrine\ORM\Mapping as ORM;
@@ -124,7 +124,7 @@ Here is an example Entity:
         }
         
     }
-
+```
 Firstly, the `use` statements need to be present in each entity. Secondly the class needs to extend `Doctrine_entity`. This will allow it to inherit all of the standard Doctrine functions.
 
 You'll need to run the following command to generate the schema in the Database:
@@ -134,7 +134,7 @@ You'll need to run the following command to generate the schema in the Database:
 Using `php application/libraries/doctrine/console` will load the CodeIgniter database configuaration before running any Doctrine CLI commands.
 
 From your controller or model you can save data like so:
-    
+```php    
     // Load the required libraries.
     $this->load->library('doctrine');
     $this->load->library('doctrine/doctrine_entity');
@@ -150,9 +150,9 @@ From your controller or model you can save data like so:
     
     // Flush Doctrine, this is where the SQL Insert is performed.
     $this->doctrine->em->flush();
-
+```
 You can query data like so:
-
+```php
     // Load the required libraries.
     $this->load->library('doctrine');
     $this->load->library('doctrine/doctrine_entity');
@@ -163,13 +163,13 @@ You can query data like so:
     
     // Get the Name
     $name = $rsvp->getName();
-
+```
 If you'd like to update the object (above), you can do this:
-    
+```php
     // Set the Name
     $name->setName('Jon Stewart');
     
     // Flush Doctrine, this is where the SQL Update is performed.
     $this->doctrine->em->flush();
-	  
+```	  
 For more information, please refer to the [Doctrine ORM Documentation](http://docs.doctrine-project.org/en/latest/)
